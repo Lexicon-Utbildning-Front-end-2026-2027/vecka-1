@@ -4,6 +4,14 @@ Välkommen till första veckan på kursen. Denna vecka blir det mycket info om k
 
 ---
 
+## 🎯 Ett övergripande mål för de första fyra veckorna
+
+Under kursens fyra första veckor bygger du **en egen liten receptsajt**. Du utgår från receptsidan med pannkakor från test- och kartläggningen.
+
+Efter de första veckorna blir den till en större sajt som är tillgänglig, responsiv och byggd med CSS som någon annan kan läsa och arbeta vidare på.
+
+**[Utforska övningens alla delar här!](ovning-1.md)**
+
 ## 🎯 Mål för veckan
 
 * Förbättra receptsidan med fokus på semantik och tillgänglighet
