@@ -49,6 +49,7 @@ Ni installerar även ert första tillägg för VS Code: "Live Share", vars syfte
 
 #### 🛠️ Övningar
 * [Live Share](https://visualstudio.microsoft.com/services/live-share/)
+* [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 ---
 
