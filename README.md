@@ -24,7 +24,7 @@ Efter de första veckorna blir den till en större sajt som är tillgänglig, re
 * [Pluralsight - HTML & CSS Path](https://app.pluralsight.com/learning-paths/63bb2ee7-8f11-403c-b299-9b92945b7ece)
 * [Extra - (SCRIMBA) Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p)
 * [Extra - Pluralsight - VS Code Path](https://app.pluralsight.com/learning-paths/51cd2099-1478-46c8-acf7-ee035e22ad50)
-* [WCAG Path](https://app.pluralsight.com/paths/skill/web-accessibility)
+* [Pluralsight - WCAG Path](https://app.pluralsight.com/paths/skill/web-accessibility)
 
 ### 🛠️ Övningar
 * [Extra för de som vill öva mer - Frontend Mentor](https://www.frontendmentor.io/challenges?languages=CSS&type=free)
