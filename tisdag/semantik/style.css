@@ -216,6 +216,28 @@ a {
   background: var(--color-surface);
   box-shadow: var(--shadow-card);
   padding: var(--space-large);
+
+  /* for making the link of the h2 of the card span the whole card use this alongside with the ::after */
+  position: relative;
+
+  .card-link::after {
+    content: "";
+    position: absolute;
+    inset: 0; /* Stretches the hit area to top, right, bottom, left: 0 */
+    z-index: 1;
+  }
+
+  /* Accessible focus styling */
+  .card-link:focus-visible::after {
+    outline: 2px solid #2563eb;
+    outline-offset: -2px;
+  }
+
+  /* if we have other links in the card with the expanded link we need to place them above it */
+  .tags {
+    position: relative;
+    z-index: 2;
+  }
 }
 
 .dark-strip {
