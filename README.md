@@ -130,7 +130,7 @@ Idag går vi igenom olika verktyg som är bra att kunna vid tillgänglighetstest
 - Prata om vad som kan hända när instruktioner är otydliga
 - Följa en kodändring live
 - Vara med och styra kodändringar
-- Gruppövningar inför fredagens kodsnack
+- Frågor inför fredagens kodsnack
 
 ### 🎯 Mål för dagen
 
