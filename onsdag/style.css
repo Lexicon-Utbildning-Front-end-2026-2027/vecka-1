@@ -1,0 +1,350 @@
+/* Tokens */
+:root {
+  color-scheme: light;
+  --color-page: #f4f7f6;
+  --color-surface: #fff;
+  --color-blue-gray: #2c3e50;
+  --color-navigation: #34495e;
+  --color-text: #333;
+  --color-muted: #555;
+  --color-subtle: #7f8c8d;
+  --color-accent: #3498db;
+  --color-button: #39a3eb;
+  --color-divider: #ecf0f1;
+  --shadow-card: 0 4px 6px rgb(0 0 0 / 5%);
+  --radius-card: 0.5rem;
+  --radius-full: 100vw;
+  --content-width: 68.75rem;
+  --space: 1em;
+  --space-xs: 0.25em;
+  --space-sm: 0.5em;
+  --space-md: 1.5em;
+  --space-large: 2em;
+  --transition-link: color 0.3s ease;
+}
+
+/* Skip link */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    z-index: 1000;
+
+    padding: 0.75rem 1.5rem;
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+/* Reset/Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  background: var(--color-page);
+  color: var(--color-text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-navigation);
+  text-decoration: none;
+  transition: var(--transition-link);
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+/* Composition */
+.middle-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  max-width: var(--content-width);
+  gap: var(--space-large);
+  margin: var(--space-large) auto;
+  padding-inline: var(--space);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-large);
+}
+
+.stack > * + * {
+  margin-block-start: var(--space-md);
+}
+
+.flow {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* Utilities */
+.block {
+  display: block;
+}
+
+.text-sm {
+  font-size: 0.9rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.1rem;
+}
+
+.text-3xl {
+  font-size: 1.8rem;
+}
+
+.text-4xl {
+  font-size: 2.5rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-blue-gray {
+  color: var(--color-blue-gray);
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.text-subtle {
+  color: var(--color-subtle);
+}
+
+.text-white {
+  color: #fff;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.8rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.border-b {
+  border-bottom: 1px solid #eee;
+}
+
+.border-b-2 {
+  border-bottom: 2px solid var(--color-divider);
+}
+
+.border-divider {
+  border-color: var(--color-divider);
+}
+
+.border-neutral-200 {
+  border-color: #eee;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Blocks */
+.bottom-container {
+  margin-top: 3rem;
+  padding: var(--space-large);
+  background: var(--color-blue-gray);
+  color: #fff;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  background: var(--color-button);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background: #2980b9;
+    color: #fff;
+  }
+}
+
+.card {
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-large);
+
+  /* for making the link of the h2 of the card span the whole card use this alongside with the ::after */
+  position: relative;
+
+  .card-link::after {
+    content: "";
+    position: absolute;
+    inset: 0; /* Stretches the hit area to top, right, bottom, left: 0 */
+    z-index: 1;
+  }
+
+  /* Accessible focus styling */
+  .card-link:focus-visible::after {
+    outline: 2px solid #2563eb;
+    outline-offset: -2px;
+  }
+
+  /* if we have other links in the card with the expanded link we need to place them above it */
+  .tags {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.dark-strip {
+  margin-top: 2.5rem;
+  padding: var(--space);
+  background: var(--color-navigation);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+}
+
+.horizontal-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space) 2rem;
+
+  a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-link);
+
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    &:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 3px;
+    }
+  }
+}
+
+.tags > * {
+  border: 1px solid var(--color-subtle);
+  border-radius: var(--radius-full);
+
+  a {
+    display: block;
+    padding-inline: var(--space-sm);
+    padding-block: var(--space-xs);
+  }
+}
+
+.top-container {
+  padding-top: 2.5rem;
+  background: var(--color-blue-gray);
+  color: #fff;
+  text-align: center;
+
+  a {
+    color: inherit;
+  }
+}
+
+.vertical-group {
+  display: grid;
+  gap: var(--space-xs);
+
+  a {
+    display: block;
+    padding-block: 0.8rem;
+  }
+
+  > *:not(:last-child) {
+    border-bottom: 1px solid var(--color-divider);
+  }
+}
+
+/* Exceptions */
+@media (max-width: 48rem) {
+  .middle-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .top-container .text-4xl {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

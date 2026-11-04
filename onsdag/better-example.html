@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech News Today</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Skip link -->
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
+
+    <header class="top-container">
+        <a class="text-4xl font-bold mb-2" href="/">Tech News Today</a>
+        <p class="text-lg opacity-50">Your daily dose of technology updates.</p>
+
+        <!-- NAVIGATION LINKS -->
+        <!-- The aria-label attribute is used to provide a text description 
+         of the navigation menu for screen readers and assistive technologies. 
+         You don't need this if there is only one navigation menu on the page. -->
+        <!-- Avoid writing navigation in the label since this will be repeated -->
+        <nav aria-label="Main" class="dark-strip">
+            <ul class="horizontal-group">
+                <!-- If there is a logo or similar with link to the root/home page 
+                it might be better to remove the home link to avoid duplicated announcements -->
+                <!-- <li><a href="#">Home</a></li> -->
+                <li><a href="#">Gadgets</a></li>
+                <li><a href="#">Software</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="middle-wrapper">
+        <main class="panel" id="main-content" tabindex="-1">
+            <!-- We could make a h1 here with better SEO text than just the logo text, there are other options too depending on what we need -->
+            <!-- it's actually quite common to hide h1 from sighted users since it feels redundant, but for sr it's used for navigation, so show it for them. Use a hiding class that is not hiding it for everyone however! -->
+            <h1 class="sr-only">Technology News, Reviews, and Analysis</h1>
+            <!-- We can use aria-labelledby to tie a heading to the section, thus making it more important and named -->
+            <!-- Be careful about too many aria-labelledby, this means too much repeating info for screenreaders -->
+            <section class="stack" aria-labelledby="section-heading-latest-news">
+                <!-- Header is optional here. It could be used to group the heading and description or metadata for example. -->
+                <!-- <header>-->
+                <h2 id="section-heading-latest-news" class="font-bold">Our Latest Articles</h2>
+                <!-- <p>Here are some of our latest articles</p>-->
+                <!-- </header> -->
+                <article class="card stack">
+                    <!-- Here is an example how to use header to group the heading and the meta -->
+                    <header>
+                        <h3 class="text-3xl font-bold text-blue-gray">
+                            <a class="card-link" href="#">The Future of AI Assistants</a>
+                        </h3>
+                        <!-- Metadata here can be good, but is sometimes better in the footer, depending on what is important. Focus and info matters -->
+                        <p class="text-sm text-subtle mb-6 pb-4 border-b border-neutral-200">
+                            Published on <time datetime="2026-04-27">April 27, 2026</time> by Jane Doe
+                        </p>
+                    </header>
+                    <!-- Use width/height to avoid things jumping around (cumulative layout shift - CLS)-->
+                    <!-- Almost no images apart from backgrounds or symbols are decorative, so use an alt tag that describes the image as it's seen -->
+                    <img src="https://picsum.photos/500/250?random=4" width="500" height="250"
+                        alt="Green forest with mist rolling down the hills" />
+
+                    <!-- Section is for a thematic part of the article and if there are several sections. It's not needed if there is only a single heading and paragraph inside.-->
+                    <section class="stack">
+                        <h4 class="text-lg font-bold">Introduction</h4>
+                        <p class="block text-base text-muted">
+                            Artificial intelligence is rapidly evolving. We are now seeing
+                            assistants that can perform complex multi-step tasks across
+                            various applications. This new generation of AI promises to
+                            drastically change how we interact with our computers,
+                            prioritizing natural language over traditional user interfaces.
+                        </p>
+                    </section>
+                    <section class="stack">
+                        <h4 class="text-lg font-bold">Second heading</h4>
+                        <p class="block text-base text-muted">
+                            Artificial intelligence is rapidly evolving. We are now seeing
+                            assistants that can perform complex multi-step tasks across
+                            various applications. This new generation of AI promises to
+                            drastically change how we interact with our computers,
+                            prioritizing natural language over traditional user interfaces.
+                        </p>
+                    </section>
+                    <!-- Footer could be used here if you want, but also for things like additional information/meta.-->
+                    <footer class="stack">
+                        <ul class="flow tags">
+                            <li><a href="/tag/ai">#AI</a></li>
+                            <li><a href="/tag/tech">#Tech</a></li>
+                        </ul>
+                        <!-- Usually it's better to link the heading than making a read more button, this makes it clear to screenreaders -->
+                        <!-- <a href="#" class="button" aria-label="Read full article: The Future of AI Assistants">Read
+                            full
+                            article</a> -->
+                    </footer>
+                </article>
+
+                <article class="card stack">
+                    <header>
+                        <h3 class="text-3xl font-bold text-blue-gray"><a class="card-link" href="#">New Smartphone
+                                Released</a>
+                        </h3>
+                        <p class="text-sm text-subtle mb-6 pb-4 border-b border-neutral-200">Published on
+                            <time datetime="2026-04-26">April 26, 2026</time> by John Smith
+                        </p>
+                    </header>
+
+                    <img src="https://picsum.photos/500/250?random=5" width="500" height="250"
+                        alt="Blue smartphone prototype with big screen">
+                    <p>The latest flagship device from leading manufacturers features an incredible 100-hour battery
+                        life and a holographic display that completely redefines mobile interaction. Early reviews are
+                        praising its sleek design and unparalleled performance in mobile gaming.</p>
+                </article>
+            </section>
+        </main>
+
+        <aside class="panel">
+            <!-- Since it's aside it can actually start with h2, it's secondary to the main content -->
+            <section class="card stack">
+                <h2 class="mb-4 pb-3 border-b-2 border-divider text-lg font-bold text-blue-gray">About the Author</h2>
+                <img src="https://picsum.photos/200/200?random=6" alt="Author photo">
+                <p>Welcome to our tech blog! We cover the latest trends, reviews, and news in the fast-paced world of
+                    technology.</p>
+            </section>
+
+            <!-- Use nav for important navigation link groups, such as site navigation or category navigation. -->
+            <!-- Section isn't needed here but could sometimes be used for styling or making the whole structure unified -->
+            <section class="card">
+                <nav aria-labelledby="popular-categories">
+                    <h2 class="mb-4 pb-3 border-b-2 border-divider text-lg font-bold text-blue-gray"
+                        id="popular-categories">Popular Categories</h2>
+                    <ul class="vertical-group">
+                        <li><a href="#">AI & Machine Learning</a></li>
+                        <li><a href="#">Hardware Reviews</a></li>
+                        <li><a href="#">Web Development</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Things that are not navigational, like external links, login, social media and similar, should not use nav -->
+            <section class="card">
+                <h2 class="mb-4 pb-3 border-b-2 border-divider text-lg font-bold text-blue-gray">External links</h2>
+                <ul class="vertical-group">
+                    <li><a href="https://www.google.com">Google</a></li>
+                    <li><a href="https://www.bing.com">Bing</a></li>
+                    <li><a href="https://www.yahoo.com">Yahoo</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <footer class="bottom-container">
+        <p class="block text-base text-white mb-0">
+            &copy; 2026 Tech News Today. All rights reserved.
+        </p>
+    </footer>
+</body>
+
+</html>
