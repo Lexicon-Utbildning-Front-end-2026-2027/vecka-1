@@ -126,7 +126,7 @@ Idag går vi igenom olika verktyg som är bra att kunna vid tillgänglighetstest
 - Arbete med e-learning, läsning, övningar och kodning.
 - Arbeta med veckans mål och det vi pratat om i veckan.
 
-**På CV-seminariumet går vi igenom:**
+**På kodsnack-seminariumet går vi igenom:**
 - Prata om vad som kan hända när instruktioner är otydliga
 - Följa en kodändring live
 - Vara med och styra kodändringar
