@@ -158,11 +158,8 @@ Vi delar in i grupper som ni sedan får träffa och prata lite om hur veckan gå
 Exempelfrågor att svara på:
 
 - Vem är jag?
-- Hur har receptsidor förändrat något i mitt liv?
-  - om inte direkt, hur har de förändrat det indirekt?
-    - större press att kunna laga svåra rätter, när allt är tillgängligt?
-    - sparat tid?
-  - Nämn en detalj som gör en receptsida lättare att använda?
+- Hur och när använder du receptsidor om alls?
+- Ge ett exempel på något som du tänker gör en receptsida lättare att använda
 
 #### Presentation
 
@@ -177,7 +174,7 @@ Exempelfrågor att svara på:
   * Förklara hur du tänkt kring t.ex: `<header>, <main>, <section>, <article>`
     * vad representerar vad?
   * Rubriknivåerna (h1, h2, h3) — följer de en logisk struktur?
-  * Bilder — använder du alt-texter? Någon bild i <figure> + <figcaption>?
+  * Bilder — Använder du alt-texter? Vilka bilder tänker du som dekorativa och ej? Någon bild i figure + figcaption?
 * Finns kontrastproblem, saknade alt-texter eller rubrikfel?
   * Hur skulle du kunna åtgärda det i så fall?
 
