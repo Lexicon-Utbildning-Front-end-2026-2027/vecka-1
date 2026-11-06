@@ -174,7 +174,7 @@ Exempelfrågor att svara på:
   * Förklara hur du tänkt kring t.ex: `<header>, <main>, <section>, <article>`
     * vad representerar vad?
   * Rubriknivåerna (h1, h2, h3) — följer de en logisk struktur?
-  * Bilder — Använder du alt-texter? Vilka bilder tänker du som dekorativa och ej? Någon bild i figure + figcaption?
+  * Bilder — Använder du alt-texter? Någon bild i figure + figcaption?
 * Finns kontrastproblem, saknade alt-texter eller rubrikfel?
   * Hur skulle du kunna åtgärda det i så fall?
   * Testade du med tangentbordsnavigering, skärmläsare eller andra verktyg? Visade det något som du missat innan eller har du några tankar om hur det var?
