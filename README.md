@@ -189,8 +189,8 @@ Exempelfrågor att svara på:
 
 Varje grupp delar:
 
-* Vad var svårast i veckans uppgift?
-* Vad tyckte ni i gruppen var mest användbart/intressant som ni lärde er av uppgiften?
+* Vad var svårast att förstå och/eller implementera från veckans teori/genomgångar?
+* Vad tyckte ni i gruppen var mest användbart/intressant som ni lärde er av uppgiften/veckans innehåll?
 
 ### 🎯 Mål för dagen
 
